@@ -83,6 +83,7 @@ declare global {
 			getVariant: (name: string) => string | boolean | undefined;
 			override: (name: string, value: string) => void;
 		};
+		profitwell?: any;
 	}
 }
 

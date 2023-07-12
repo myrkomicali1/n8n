@@ -238,6 +238,9 @@ export default defineComponent({
 			if (currentUser) {
 				const traits: SegmentUserTraits = currentUser.email ? { email: currentUser.email } : {};
 				useSegment().identify(currentUser.id, traits);
+				if (window.profitwell) {
+					window.profitwell('start', { user_email: currentUser.email });
+				}
 			}
 		},
 	},
